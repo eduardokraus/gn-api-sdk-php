@@ -10,6 +10,8 @@ $options = json_decode($file, true);
 
 try {
     $api = Gerencianet::getInstance($options);
+    
+    $evp = $api->pixCriarChaveEvp([], []);
 
     $params = [];
 
@@ -24,7 +26,7 @@ try {
           "valor" => [
             "original" => "0.01"
           ],
-          "chave" => "",
+          "chave" => $evp["chave"],
           "solicitacaoPagador" => "Cobrança dos serviços prestados.",
           "infoAdicionais" => [
             [
