@@ -242,6 +242,10 @@
       "pixLocationDeleteTxid": {
         "route": "/v2/loc/:id/txid",
         "method": "delete"
+      },
+      "pixCriarChaveEvp": {
+        "route": "/v2/gn/evp",
+        "method": "post"
       }
     }
   }
